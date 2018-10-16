@@ -3,14 +3,19 @@ package com.example.b.coolweather.db;
 import org.litepal.crud.DataSupport;
 
 /**
- * Created by B on 2018/10/13.
+ * Created by B on 2018/10/16.
  */
-public class County extends DataSupport{
-private int id;
-    private int cityId;
-    private String countyname;
-    private String weather;
+public class County extends DataSupport {
 
+    private int id;//实体类的id
+
+    private String countyName;//县的名字
+
+    private String weatherId;//县所对应天气的id值
+
+    private int cityId;//当前县所属市的id值
+
+    //getter和setter方法
     public int getId() {
         return id;
     }
@@ -19,20 +24,20 @@ private int id;
         this.id = id;
     }
 
-    public void setCountyname(String countyname) {
-        this.countyname = countyname;
+    public String getCountyName() {
+        return countyName;
     }
 
-    public String getCountyname() {
-        return countyname;
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
     }
 
-    public void setWeather(String weather) {
-        this.weather = weather;
+    public String getWeatherId() {
+        return weatherId;
     }
 
-    public String getWeather() {
-        return weather;
+    public void setWeatherId(String weatherId) {
+        this.weatherId = weatherId;
     }
 
     public int getCityId() {
@@ -43,4 +48,3 @@ private int id;
         this.cityId = cityId;
     }
 }
-
